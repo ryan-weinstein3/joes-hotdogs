@@ -7,8 +7,12 @@
 			var hotdogs = prompt("Welcome to Joe's Hotdogs! How many hotdogs?", 0);
 			var fries = prompt("How many fries?", 0);
 			var drinks = prompt("How many drinks?", 0);
-			var subtotal = hotdogs * 3.25 + fries * 2 + drinks * 1.5
-			//if (subtotal >= 20)
+			var subtotal = hotdogs * 3.25 + fries * 2 + drinks * 1.5;
+			if (subtotal >= 20) {
+				document.write("Congratulations! You qualified for the 10% discount!");
+			}
 		</script>
+		<h1>Joe's Hotdogs</h1>
+		<h2>Order Details</h2>
 	</body>
 </html>
