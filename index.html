@@ -12,19 +12,19 @@
 			var hotdogs = prompt("Welcome to Joe's Hotdogs! How many hotdogs?", 0);
 			var fries = prompt("How many fries?", 0);
 			var drinks = prompt("How many drinks?", 0);
-			document.write(hotdogs + " hotdogs ($3.25 each) = $" + hotdogs * 3.25 + "\n");
-			document.write(fries + " fries ($2.00 each) = $" + fries * 2 + "\n");
-			document.write(drinks + " drinks ($1.50 each) = $" + drinks * 1.5 + "\n");
+			document.write(hotdogs + " hotdogs ($3.25 each) = $" + (hotdogs * 3.25).toFixed(2) + "\n");
+			document.write(fries + " fries ($2.00 each) = $" + (fries * 2).toFixed(2) + "\n");
+			document.write(drinks + " drinks ($1.50 each) = $" + (drinks * 1.5).toFixed(2) + "\n");
 			var subtotal = hotdogs * 3.25 + fries * 2 + drinks * 1.5;
 			if (subtotal >= 20) {
 				document.write("Congratulations! You qualified for the 10% discount!" + "\n");
 				subtotal *= 0.9;
 			}
-			document.write("Subtotal: $" + subtotal + "\n");
+			document.write("Subtotal: $" + subtotal.toFixed(2) + "\n");
 			var tax = subtotal * 0.0625;
-			document.write("Tax: $" + tax + "\n");
+			document.write("Tax: $" + tax.toFixed(2) + "\n");
 			var total = subtotal + tax;
-			document.write("Total: $" + total + "\n");
+			document.write("Total: $" + total.toFixed(2) + "\n");
 		</script>
 	</body>
 </html>
