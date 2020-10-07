@@ -12,16 +12,19 @@
 			var hotdogs = prompt("Welcome to Joe's Hotdogs! How many hotdogs?", 0);
 			var fries = prompt("How many fries?", 0);
 			var drinks = prompt("How many drinks?", 0);
-			document.write(hotdogs + " hotdogs ($3.25 each) = " + hotdogs * 3.25);
-			document.write(fries + " fries ($2.00 each) = " + fries * 2);
-			document.write(drinks + " drinks ($1.50 each) = " + drinks * 1.5);
+			document.write(hotdogs + " hotdogs ($3.25 each) = $" + hotdogs * 3.25);
+			document.write(fries + " fries ($2.00 each) = $" + fries * 2);
+			document.write(drinks + " drinks ($1.50 each) = $" + drinks * 1.5);
 			var subtotal = hotdogs * 3.25 + fries * 2 + drinks * 1.5;
 			if (subtotal >= 20) {
 				document.write("Congratulations! You qualified for the 10% discount!");
 				subtotal *= 0.9;
 			}
-			subtotal *= 1.0625;
-			
+			document.write("Subtotal: $" + subtotal);
+			var tax = subtotal * 0.0625;
+			document.write("Tax: $" + tax);
+			var total = subtotal + tax;
+			document.write("Total: $" + total);
 		</script>
 	</body>
 </html>
